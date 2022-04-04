@@ -1,0 +1,134 @@
+:root {
+  --secundario: #37517e;
+  --primario: #198a80e6;
+  --gradiente-primario: rgba(40, 58, 90, 0.9);
+  --gradiente-secundario: rgba(25, 138, 128, 0.9);
+}
+
+a {
+  color: var(--primario);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #2ed6c8e6;
+}
+.navbar .login,
+.navbar .login:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #188ebde6;
+  font-weight: 600;
+}
+.navbar .login:hover,
+.navbar .login:focus:hover {
+  color: #fff;
+  background: var(--secundario);
+}
+.navegacion-movil {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+.navegacion-movil.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .navegacion-movil {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
+.contenedor-movil {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--primario);
+  transition: 0.3s;
+  z-index: 999;
+}
+.contenedor-movil .navegacion-movil {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.contenedor-movil ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.contenedor-movil a,
+.contenedor-movil a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: var(--secundario);
+}
+.contenedor-movil a:hover,
+.contenedor-movil .active,
+.contenedor-movil li:hover > a {
+  color: var(--primario);
+}
+.contenedor-movil .login,
+.contenedor-movil .login:focus {
+  margin: 15px;
+  color: var(--secundario);
+}
